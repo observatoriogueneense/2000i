@@ -13,7 +13,7 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "name": "20000",
+  "name": "backcgad",
   "version": "1.0.0",
   "description": "CGDA project",
   "main": "index.js",
