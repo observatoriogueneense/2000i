@@ -8,7 +8,7 @@ router.get("/", async(req, res)=>{
     try {
         const response = await Atual.find();
         const reverseRes = response.reverse()
-        res.status(200).json(reverseRes )
+        res.status(200).json(reverseRes)
     } catch (error) {
         res.status(200).json("Erro na Execução!")
     }
