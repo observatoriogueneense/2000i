@@ -78,10 +78,21 @@ router.post("/login", async(req, res)=>{
 })
 
 
-router.put("/:id", async(req, res)=>{
+router.put("/", async(req, res)=>{
     try {
-        await Adm.findByIdAndUpdate(req.params.id, req.body)
-        res.status(200).json("Editado com sucesso!")
+        var setss = null;
+        var valid = false;
+        const useres = await Adm.find()
+        
+        if(req.body.sets){
+            const salt = await bcrypt.genSalt(10);
+            setss = await bcrypt.hash(req.body.sets, salt);
+        }
+        if(setss){
+            await Adm.findByIdAndUpdate(useres[0]._id, {sets: setss})
+            valid = true;
+        }
+        res.status(200).json({valid})
     } catch (error) {
         res.status(200).json("Erro ao Editar!")
     }
