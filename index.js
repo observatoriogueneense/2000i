@@ -11,6 +11,8 @@ const Atual = require('./routes/Atual')
 const Contato = require('./routes/Contato')
 const Parceiros = require('./routes/Parceiros')
 const Adm = require('./routes/Adm')
+const BannerTema = require('./routes/BannerTema')
+const BannerParceria = require('./routes/BannerParceria')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -38,6 +40,8 @@ app.use("/atual", Atual)
 app.use("/contato", Contato)
 app.use("/parceiros", Parceiros)
 app.use("/adm", Adm)
+app.use("/bannertema", BannerTema)
+app.use("/bannerparceria", BannerParceria)
 
 const port = process.env.PORT
 app.listen(port, console.log("Servidor funcionando!", port))

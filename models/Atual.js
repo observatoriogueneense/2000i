@@ -4,7 +4,6 @@ const AtualSchema = new mongoose.Schema({
     title:String,
     img:String,
     local:String,
-    text:String
 },
     {timestamps: true}
 );
