@@ -14,6 +14,8 @@ const Adm = require('./routes/Adm')
 const BannerTema = require('./routes/BannerTema')
 const BannerParceria = require('./routes/BannerParceria')
 const Logo = require('./routes/Logo')
+const Img = require('./routes/Img')
+const Fundo = require('./routes/Fundo')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -44,6 +46,8 @@ app.use("/adm", Adm)
 app.use("/bannertema", BannerTema)
 app.use("/bannerparceria", BannerParceria)
 app.use("/logo", Logo)
+app.use("/img", Img)
+app.use("/fundo", Fundo)
 
 const port = process.env.PORT
 app.listen(port, console.log("Servidor funcionando!", port))
