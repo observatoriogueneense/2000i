@@ -17,6 +17,7 @@ const Logo = require('./routes/Logo')
 const Img = require('./routes/Img')
 const Fundo = require('./routes/Fundo')
 const FundoTema = require('./routes/FundoTema')
+const uploadRouter  = require("./controllers/upload-file.controller");
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -29,14 +30,16 @@ app.use((req, res, next)=>{
 })
 app.use(cors())
 
-const uploadRouter = require('./Image');
+// const uploadRouter = require('./Image');
+
 
 
 app.get("/", (req, res)=>{
     res.send("CGAD")
 })
 
-app.use("/upload", uploadRouter);
+// app.use("/upload", uploadRouter);
+app.use('/upload', uploadRouter);
 app.use("/home", Principal)
 app.use("/sobre", Sobre)
 app.use("/tema", Tema)
