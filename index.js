@@ -48,14 +48,13 @@ app.get("/", (req, res)=>{
 
 //Initialize a firebase application
 const firebaseConfig =  {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-    databaseURL: process.env.FIRESTORE_DB_URL,
-    storageBucket: process.env.STORAGE_BUCKET,
-    messagingSenderId: process.env.MESSAGING_SENDER_ID,
-    appId: process.env.APP_ID,
-    measurementId: process.env.MEASUREMENT_ID,
+    apiKey: "AIzaSyC5RgtPVCYK5N7rvu_hTAgUkB2zBJkG16Y",
+    authDomain: "observatorio-e2ba4.firebaseapp.com",
+    projectId: "observatorio-e2ba4",
+    storageBucket: "observatorio-e2ba4.appspot.com",
+    messagingSenderId: "406207783313",
+    appId: "1:406207783313:web:2175a42149338faae6ba30",
+    measurementId: "G-L7FP1FBCW6"
   }
 const config = {
     firebaseConfig
